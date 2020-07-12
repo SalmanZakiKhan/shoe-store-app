@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Product from "./components/Products";
 import ProductDetails from "./components/ProductDetails";
@@ -48,7 +48,7 @@ function App() {
                 Object.entries(shoes).map(([title,{name,img}]) => (
                         <div key={title}>
                             <h3>{title}</h3>
-                            <img src={img} width="250" height="200"/><br />
+                            <img src={img} width="250" height="200" alt={name}/><br />
                             <strong>{name}</strong>
                         </div>
                 ))
