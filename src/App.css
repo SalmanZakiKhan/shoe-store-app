@@ -1,11 +1,20 @@
-body {
+/* body {
     background-color: whitesmoke;
-}
+} */
 
 .navbar {
     height: 70px;
     background-color: lightblue;
+   
 }
+
+/* .main-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+} */
 
 ul {
     width:85%;
@@ -31,6 +40,32 @@ h1 {
     padding-left:7px;
     display:inline;
 }
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* .container img {
+    border: 2px solid black;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    color: white;
+} */
+
+.sub-div {
+    border: 2px solid black;
+    margin: 15px 15px;
+    box-shadow: 2px 2px 2px 2px black;
+    /* background-color: white; */
+    
+}
+
 /* 
 .navbar h1 {
     margin: auto 500px;

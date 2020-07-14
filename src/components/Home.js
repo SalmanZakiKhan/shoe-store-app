@@ -1,10 +1,8 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-function ProductDetails() {
+function Home() {
 
-  const {id} = useParams();
-  
     const shoes = {
         "air-jordan-3-valor-blue": {
           "name": "VALOUR BLUE",
@@ -35,17 +33,22 @@ function ProductDetails() {
           "name": "RACER BLUE",
           "img":
             "https://secure-images.nike.com/is/image/DotCom/CK6637_104_A_PREM?$SNKRS_COVER_WD$&align=0,1"
-        }
+        },
       }
-      
-      const {name,img}= shoes[id];
-      
+
     return (
-        <div>
-            <strong>{name}</strong>
-            <img src={img} height="300" width="300" />
+        <div className="container">
+            {
+                Object.entries(shoes).map(([title,{name,img}]) => (
+                        <div key={title} className="sub-div">
+                            <h3>{title}</h3>
+                            <Link to={`/product/${title}`}><img src={img} width="300" height="300" alt={name}/><br /></Link>
+                            <strong>{name}</strong>
+                        </div>
+                ))
+            }
         </div>
     )
 }
 
-export default ProductDetails
+export default Home
