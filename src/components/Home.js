@@ -41,9 +41,8 @@ function Home() {
             {
                 Object.entries(shoes).map(([title,{name,img}]) => (
                         <div key={title} className="sub-div">
-                            <h3>{title}</h3>
-                            <Link to={`/product/${title}`}><img src={img} width="300" height="300" alt={name}/><br /></Link>
-                            <strong>{name}</strong>
+                            <Link to={`/product/${title}`}><img src={img} width="300" height="300" alt={name}/><br />
+                            <h3 className="image-text">{name}</h3></Link>
                         </div>
                 ))
             }

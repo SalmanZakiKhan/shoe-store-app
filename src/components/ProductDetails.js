@@ -41,9 +41,9 @@ function ProductDetails() {
       const {name,img}= shoes[id];
       
     return (
-        <div>
-            <strong>{name}</strong>
-            <img src={img} height="300" width="300" />
+        <div class="single-product">
+            <img src={img} height="300" width="300" alt={name} />
+            <h2>{name}</h2>
         </div>
     )
 }
